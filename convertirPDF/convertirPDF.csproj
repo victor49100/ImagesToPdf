@@ -5,17 +5,22 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackAsTool>False</PackAsTool>
-    <PackageIcon>Capture d'écran 2023-05-30 233630.png</PackageIcon>
-    <ApplicationIcon>Capture-d_écran-2023-05-30-233630.ico</ApplicationIcon>
+    <PackAsTool>True</PackAsTool>
+    <PackageIcon>png.png</PackageIcon>
+    <ApplicationIcon>png.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Capture-d_écran-2023-05-30-233630.ico" />
+    <Content Include="png.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\Pictures\Screenshots\Capture d'écran 2023-05-30 233630.png">
+    <None Include="..\..\..\..\..\Pictures\icones\png.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -30,7 +35,7 @@
     <PackageReference Include="itext7" Version="8.0.0" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="PdfSharp" Version="1.50.5147" />
-    <PackageReference Include="PdfSharpCore" Version="1.3.56" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.57" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 

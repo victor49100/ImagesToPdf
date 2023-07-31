@@ -41,7 +41,7 @@ namespace ImageToPdfConverter
                         iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(imageFile);
 
                         // Ajuster la taille de la page en fonction de l'image
-                        document.SetPageSize(new Rectangle(image.Width, image.Height));
+                        document.SetPageSize(new Rectangle(image.Width+40, image.Height+40));
                         document.NewPage();
 
                         // Ajouter l'image à la page PDF
